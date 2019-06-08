@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Copyright 2018 The TensorFlow Authors. All Rights Reserved.
+# Copyright 2018 Kirby Banman. All Rights Reserved.
+# Modified from work by the Tensorflow Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -47,12 +48,12 @@ function main() {
 
   echo $(date) : "=== Using tmpdir: ${TMPDIR}"
 
-  echo "=== Copy TensorFlow Zero Out files"
+  echo "=== Copy TensorFlow Lying Relu files"
 
   cp ${PIP_FILE_PREFIX}setup.py "${TMPDIR}"
   cp ${PIP_FILE_PREFIX}MANIFEST.in "${TMPDIR}"
   cp ${PIP_FILE_PREFIX}LICENSE "${TMPDIR}"
-  rsync -avm -L --exclude='*_test.py' ${PIP_FILE_PREFIX}tensorflow_zero_out "${TMPDIR}"
+  rsync -avm -L --exclude='*_test.py' ${PIP_FILE_PREFIX}tensorflow_lying_relu "${TMPDIR}"
 
   pushd ${TMPDIR}
   echo $(date) : "=== Building wheel"

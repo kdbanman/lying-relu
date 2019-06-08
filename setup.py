@@ -1,4 +1,5 @@
-# Copyright 2018 The TensorFlow Authors. All Rights Reserved.
+# Copyright 2018 The Kirby Banman. All Rights Reserved.
+# Modified from work by the Tensorflow Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,7 +26,7 @@ __version__ = '0.0.1'
 REQUIRED_PACKAGES = [
     'tensorflow >= 1.12.0',
 ]
-project_name = 'tensorflow-zero-out'
+project_name = 'tensorflow-lying-relu'
 
 
 class BinaryDistribution(Distribution):
@@ -38,9 +39,9 @@ class BinaryDistribution(Distribution):
 setup(
     name=project_name,
     version=__version__,
-    description=('TensorFlow ZeroOut is a simple custom op for TensorFlow'),
-    author='Google Inc.',
-    author_email='opensource@google.com',
+    description=('LyingRelu is a neural network nonlinearity with lying gradients.'),
+    author='Kirby Banman',
+    author_email='kdbanman@ualberta.ca',
     # Contained modules and scripts.
     packages=find_packages(),
     install_requires=REQUIRED_PACKAGES,

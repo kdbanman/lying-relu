@@ -1,4 +1,5 @@
-/* Copyright 2017 The TensorFlow Authors. All Rights Reserved.
+/* Copyright 2017 Kirby Banman. All Rights Reserved.
+   Modified from work by the Tensorflow Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -17,9 +18,9 @@ limitations under the License.
 
 using namespace tensorflow;
 
-class ZeroOutOp : public OpKernel {
+class LyingReluOp : public OpKernel {
  public:
-  explicit ZeroOutOp(OpKernelConstruction* context) : OpKernel(context) {}
+  explicit LyingReluOp(OpKernelConstruction* context) : OpKernel(context) {}
 
   void Compute(OpKernelContext* context) override {
     // Grab the input tensor
@@ -43,4 +44,4 @@ class ZeroOutOp : public OpKernel {
   }
 };
 
-REGISTER_KERNEL_BUILDER(Name("ZeroOut").Device(DEVICE_CPU), ZeroOutOp);
+REGISTER_KERNEL_BUILDER(Name("LyingRelu").Device(DEVICE_CPU), LyingReluOp);

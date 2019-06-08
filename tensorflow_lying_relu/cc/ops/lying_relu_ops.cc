@@ -1,4 +1,5 @@
-/* Copyright 2017 The TensorFlow Authors. All Rights Reserved.
+/* Copyright 2017 Kirby Banman. All Rights Reserved.
+   Modified from work by the Tensorflow Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -18,7 +19,7 @@ limitations under the License.
 
 using namespace tensorflow;
 
-REGISTER_OP("ZeroOut")
+REGISTER_OP("LyingRelu")
     .Input("to_zero: int32")
     .Output("zeroed: int32")
     .SetShapeFn([](::tensorflow::shape_inference::InferenceContext* c) {
